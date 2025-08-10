@@ -12,28 +12,67 @@
       name="keywords"
       content="software engineer, web developer, teknik informatika, portofolio, javascript, php, laravel"
     />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rakha-alfarizky.com/">
+    <meta property="og:title" content="Rakha Raihan Alfarizky - Calon Software Engineer">
+    <meta property="og:description" content="Portofolio Rakha Raihan Alfarizky, Mahasiswa Teknik Informatika yang passionate dalam Software Development">
+    <meta property="og:image" content="assets/foto1.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rakha-alfarizky.com/">
+    <meta property="twitter:title" content="Rakha Raihan Alfarizky - Calon Software Engineer">
+    <meta property="twitter:description" content="Portofolio Rakha Raihan Alfarizky, Mahasiswa Teknik Informatika yang passionate dalam Software Development">
+    <meta property="twitter:image" content="assets/foto1.jpg">
+    
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    
     <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- CSS External -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rakha Raihan Alfarizky",
+      "jobTitle": "Software Engineering Student",
+      "description": "Mahasiswa Teknik Informatika Semester 6 yang passionate dalam Software Development",
+      "url": "https://rakha-alfarizky.com",
+      "sameAs": [
+        "https://github.com/rrhka27",
+        "https://www.linkedin.com/in/rakha-raihan-alfarizky-948010316/",
+        "https://www.instagram.com/rrahka_/"
+      ]
+    }
+    </script>
   </head>
   <body>
     <!-- Navigation -->
     <nav>
       <div class="nav-container">
         <div class="logo">Rakha Raihan Alfarizky</div>
-        <button class="menu-toggle" aria-label="Toggle menu">
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
           <i class="fas fa-bars"></i>
-        </button> 
-        <ul class="nav-links">
+        </button>
+        <ul class="nav-links" role="navigation">
           <li><a href="#home">Beranda</a></li>
           <li><a href="#about">Tentang Saya</a></li>
           <li><a href="#projects">Proyek</a></li>
@@ -57,11 +96,11 @@
               untuk terus belajar dan berkembang dalam teknologi terdepan.
             </p>
             <div class="cta-buttons">
-              <a href="#" class="btn btn-primary">
+              <a href="#" class="btn btn-primary" id="download-cv" role="button" aria-label="Download CV Rakha Raihan Alfarizky">
                 <i class="fas fa-download"></i>
                 Download CV
               </a>
-              <a href="#contact" class="btn btn-secondary">
+              <a href="#contact" class="btn btn-secondary" role="button" aria-label="Hubungi untuk kolaborasi">
                 <i class="fas fa-handshake"></i>
                 Ayo Kolaborasi
               </a>
@@ -69,7 +108,7 @@
           </div>
           <div class="hero-image">
             <div class="avatar">
-              <img src="assets/foto1.jpg" alt="Rakha Raihan Alfarizky" />
+              <img src="assets/foto1.jpg" alt="Foto profil Rakha Raihan Alfarizky" loading="eager" />
             </div>
           </div>
         </div>
@@ -121,18 +160,19 @@
           </p>
         </div>
         <div class="projects-grid">
-          <div class="glass-card project-card">
+          <article class="glass-card project-card">
             <div class="project-header">
               <div>
                 <h3 class="project-title">Sistem Booking Jasa Terapi</h3>
               </div>
               <div class="project-links">
-                <a href="https://github.com/rrhka27" title="GitHub"
+                <a href="https://github.com/rrhka27" title="GitHub Profile" aria-label="Lihat profil GitHub"
                   ><i class="fab fa-github"></i
                 ></a>
                 <a
                   href="https://github.com/rrhka27/Booking-Terapy.git"
-                  title="Live Demo"
+                  title="Repository"
+                  aria-label="Lihat repository proyek"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
               </div>
@@ -150,8 +190,9 @@
               <span class="tech-badge">Bootstrap</span>
               <span class="tech-badge">JavaScript</span>
             </div>
-          </div>
-          <div class="glass-card project-card">
+          </article>
+          
+          <article class="glass-card project-card">
             <div class="project-header">
               <div>
                 <h3 class="project-title">
@@ -159,12 +200,13 @@
                 </h3>
               </div>
               <div class="project-links">
-                <a href="https://github.com/rrhka27" title="GitHub"
+                <a href="https://github.com/rrhka27" title="GitHub Profile" aria-label="Lihat profil GitHub"
                   ><i class="fab fa-github"></i
                 ></a>
                 <a
                   href="https://github.com/rrhka27/CRUD_Mahasiwa_22110375_RakhaRaihanAlfarizky.git"
-                  title="Live Demo"
+                  title="Repository"
+                  aria-label="Lihat repository proyek"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
               </div>
@@ -176,15 +218,16 @@
               real-time. UI/UX yang modern dan user-friendly.
             </p>
             <div class="tech-stack">
-              <span class="tech-badge">php</span>
+              <span class="tech-badge">PHP</span>
               <span class="tech-badge">HTML5</span>
               <span class="tech-badge">CSS3</span>
               <span class="tech-badge">JavaScript</span>
               <span class="tech-badge">MySQL</span>
               <span class="tech-badge">Bootstrap</span>
             </div>
-          </div>
-          <div class="glass-card project-card">
+          </article>
+          
+          <article class="glass-card project-card">
             <div class="project-header">
               <div>
                 <h3 class="project-title">
@@ -192,12 +235,13 @@
                 </h3>
               </div>
               <div class="project-links">
-                <a href="https://github.com/rrhka27" title="GitHub"
+                <a href="https://github.com/rrhka27" title="GitHub Profile" aria-label="Lihat profil GitHub"
                   ><i class="fab fa-github"></i
                 ></a>
                 <a
                   href="https://github.com/rrhka27/22110375_RakhaRaihanAlfarrizky_L.git"
-                  title="Live Demo"
+                  title="Repository"
+                  aria-label="Lihat repository proyek"
                   ><i class="fas fa-external-link-alt"></i
                 ></a>
               </div>
@@ -205,8 +249,8 @@
             <p class="project-description">
               Project ini adalah aplikasi sederhana pemesanan tiket bioskop
               berbasis JSP (Java Server Pages). Aplikasi memungkinkan user
-              untuk:Melihat daftar film yang tersedia, Memilih film dan jam
-              tayang, Mengisi data pemesanan,Melihat detail transaksi akhir
+              untuk: Melihat daftar film yang tersedia, Memilih film dan jam
+              tayang, Mengisi data pemesanan, Melihat detail transaksi akhir
             </p>
             <div class="tech-stack">
               <span class="tech-badge">Java</span>
@@ -215,49 +259,29 @@
               <span class="tech-badge">MySQL</span>
               <span class="tech-badge">Bootstrap</span>
             </div>
-          </div>
-          <div class="glass-card project-card">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">AI Chatbot Assistant</h3>
-              </div>
-              <div class="project-links">
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="Demo"><i class="fas fa-robot"></i></a>
-              </div>
-            </div>
-            <p class="project-description">
-              Chatbot AI yang dapat membantu menjawab pertanyaan mahasiswa
-              tentang akademik. Menggunakan Natural Language Processing dan
-              Machine Learning.
-            </p>
-            <div class="tech-stack">
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">TensorFlow</span>
-              <span class="tech-badge">Flask</span>
-              <span class="tech-badge">NLTK</span>
-            </div>
-          </div>
-          <div class="glass-card project-card">
+          </article>
+          
+          <article class="glass-card project-card">
             <div class="project-header">
               <div>
                 <h3 class="project-title">Portfolio Website</h3>
               </div>
               <div class="project-links">
-                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" title="Live Site"><i class="fas fa-globe"></i></a>
+                <a href="https://github.com/rrhka27" title="GitHub Profile" aria-label="Lihat profil GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Live Site" aria-label="Lihat website langsung"><i class="fas fa-globe"></i></a>
               </div>
             </div>
             <p class="project-description">
               Website portofolio personal dengan desain modern, animasi smooth,
-              dan optimasi SEO. Fully responsive dan fast-loading performance.
+              dan optimasi SEO. Fully responsive dan fast-loading performance
+              dengan glassmorphism design yang elegan.
             </p>
             <div class="tech-stack">
               <span class="tech-badge">HTML5</span>
               <span class="tech-badge">CSS3</span>
               <span class="tech-badge">JavaScript</span>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -276,19 +300,19 @@
             <h3>Frontend Development</h3>
             <div class="skill-items">
               <div class="skill-item">
-                <i class="fab fa-html5 skill-icon"></i>
+                <i class="fab fa-html5 skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">HTML5</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-css3-alt skill-icon"></i>
+                <i class="fab fa-css3-alt skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">CSS3</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-js-square skill-icon"></i>
+                <i class="fab fa-js-square skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">JavaScript</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-bootstrap skill-icon"></i>
+                <i class="fab fa-bootstrap skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Bootstrap</span>
               </div>
             </div>
@@ -297,19 +321,19 @@
             <h3>Backend Development</h3>
             <div class="skill-items">
               <div class="skill-item">
-                <i class="fab fa-php skill-icon"></i>
+                <i class="fab fa-php skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">PHP</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-laravel skill-icon"></i>
+                <i class="fab fa-laravel skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Laravel</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-java skill-icon"></i>
+                <i class="fab fa-java skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Java</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-python skill-icon"></i>
+                <i class="fab fa-python skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Python</span>
               </div>
             </div>
@@ -318,27 +342,27 @@
             <h3>Database & Tools</h3>
             <div class="skill-items">
               <div class="skill-item">
-                <i class="fas fa-database skill-icon"></i>
+                <i class="fas fa-database skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">MySQL</span>
               </div>
               <div class="skill-item">
-                <i class="fas fa-server skill-icon"></i>
+                <i class="fas fa-server skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">XAMPP</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-git-alt skill-icon"></i>
+                <i class="fab fa-git-alt skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Git</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-github skill-icon"></i>
+                <i class="fab fa-github skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">GitHub</span>
               </div>
               <div class="skill-item">
-                <i class="fab fa-docker skill-icon"></i>
+                <i class="fab fa-docker skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Docker</span>
               </div>
               <div class="skill-item">
-                <i class="fas fa-server skill-icon"></i>
+                <i class="fas fa-server skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Laragon</span>
               </div>
             </div>
@@ -347,23 +371,23 @@
             <h3>Others</h3>
             <div class="skill-items">
               <div class="skill-item">
-                <i class="fab fa-figma skill-icon"></i>
+                <i class="fab fa-figma skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Figma</span>
               </div>
               <div class="skill-item">
-                <i class="fas fa-paint-brush skill-icon"></i>
+                <i class="fas fa-paint-brush skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Canva</span>
               </div>
               <div class="skill-item">
-                <i class="fas fa-pencil-ruler skill-icon"></i>
+                <i class="fas fa-pencil-ruler skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">CorelDRAW</span>
               </div>
               <div class="skill-item">
-                <i class="fas fa-file-word skill-icon"></i>
+                <i class="fas fa-file-word skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Word</span>
               </div>
               <div class="skill-item">
-                <i class="fas fa-file-excel skill-icon"></i>
+                <i class="fas fa-file-excel skill-icon" aria-hidden="true"></i>
                 <span class="skill-name">Excel</span>
               </div>
             </div>
@@ -383,21 +407,21 @@
           </p>
         </div>
         <div class="timeline">
-          <div class="timeline-item">
+          <article class="timeline-item">
             <div class="glass-card timeline-content">
-              <div class="timeline-date">2018 -2021</div>
+              <div class="timeline-date">2018 - 2021</div>
               <h3 class="timeline-title">
                 Anggota Ekstrakurikuler AKAPPELA (Aktivitas Penggiat Pelajar
                 Lingkungan Alam)
               </h3>
               <p class="timeline-description">
                 Berpartisipasi aktif dalam kegiatan pelestarian lingkungan
-                seperti penanaman pohon,dan pembersihan area hijau di sekolah
+                seperti penanaman pohon, dan pembersihan area hijau di sekolah
                 SMA Negeri 1 Katapang.
               </p>
             </div>
-          </div>
-          <div class="timeline-item">
+          </article>
+          <article class="timeline-item">
             <div class="glass-card timeline-content">
               <div class="timeline-date">2022 - Sekarang</div>
               <h3 class="timeline-title">Mahasiswa Teknik Informatika</h3>
@@ -406,8 +430,8 @@
                 Mardira Indonesia, jurusan Sistem Informasi.
               </p>
             </div>
-          </div>
-          <div class="timeline-item">
+          </article>
+          <article class="timeline-item">
             <div class="glass-card timeline-content">
               <div class="timeline-date">2022 - Sekarang</div>
               <h3 class="timeline-title">
@@ -422,13 +446,12 @@
                 ganda antara studi dan pekerjaan.
               </p>
             </div>
-          </div>
-          <div class="timeline-item">
+          </article>
+          <article class="timeline-item">
             <div class="glass-card timeline-content">
               <div class="timeline-date">Agustus 2025</div>
               <h3 class="timeline-title">
-                Sertifikasi Code Generation and Optimization Using IBM Granite —
-                IBM
+                Sertifikasi Code Generation and Optimization Using IBM Granite — IBM
               </h3>
               <p class="timeline-description">
                 Berhasil menyelesaikan sertifikasi resmi dari IBM yang fokus
@@ -439,7 +462,7 @@
                 perangkat lunak modern.
               </p>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -453,7 +476,7 @@
             Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya!
           </p>
         </div>
-        <div class="contact-content" >
+        <div class="contact-content">
           <div class="glass-card social-links">
             <h3 style="margin-bottom: 1.5rem; color: var(--primary-color)">
               Temukan Saya Di
@@ -462,21 +485,24 @@
               <a
                 href="https://www.linkedin.com/in/rakha-raihan-alfarizky-948010316/"
                 class="social-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Hubungi melalui LinkedIn"
               >
                 <div class="social-icon">
-                  <i class="fab fa-linkedin"></i>
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </div>
                 <span>LinkedIn</span>
               </a>
-              <a href="https://github.com/rrhka27" class="social-item">
+              <a href="https://github.com/rrhka27" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="Lihat profil GitHub">
                 <div class="social-icon">
-                  <i class="fab fa-github"></i>
+                  <i class="fab fa-github" aria-hidden="true"></i>
                 </div>
                 <span>GitHub</span>
               </a>
-              <a href="https://www.instagram.com/rrahka_/" class="social-item">
+              <a href="https://www.instagram.com/rrahka_/" class="social-item" target="_blank" rel="noopener noreferrer" aria-label="Follow Instagram">
                 <div class="social-icon">
-                  <i class="fab fa-instagram"></i>
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
                 </div>
                 <span>Instagram</span>
               </a>
@@ -484,9 +510,11 @@
                 href="https://wa.me/6281234567890"
                 class="social-item"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Hubungi melalui WhatsApp"
               >
                 <div class="social-icon">
-                  <i class="fab fa-whatsapp"></i>
+                  <i class="fab fa-whatsapp" aria-hidden="true"></i>
                 </div>
                 <span>WhatsApp</span>
               </a>
@@ -509,10 +537,82 @@
         <p style="color: var(--text-secondary)">
           © 2025 Rakha Raihan Alfarizky. Dibuat dengan ❤️ dan ☕
         </p>
+        <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.5rem;">
+          "Tetap Ngoding, Tetap Penasaran"
+        </p>
       </div>
     </footer>
 
-    <!-- JavaScript External -->
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas" style="display: none;">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script src="scripts/main.js"></script>
+    
+    <!-- Additional Styles for Back to Top Button -->
+    <style>
+      .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 50px;
+        height: 50px;
+        background: var(--gradient-primary);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.25rem;
+        cursor: pointer;
+        z-index: 1000;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-medium);
+      }
+      
+      .back-to-top:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-heavy);
+      }
+      
+      .back-to-top:active {
+        transform: translateY(-1px);
+      }
+      
+      @media (max-width: 768px) {
+        .back-to-top {
+          bottom: 1rem;
+          right: 1rem;
+          width: 45px;
+          height: 45px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Rakha Raihan Alfarizky Portfolio",
+      "url": "https://rakha-alfarizky.com",
+      "author": {
+        "@type": "Person",
+        "name": "Rakha Raihan Alfarizky",
+        "jobTitle": "Software Engineering Student",
+        "affiliation": {
+          "@type": "EducationalOrganization",
+          "name": "Sekolah Tinggi Manajemen Informatika dan Komputer Mardira Indonesia"
+        },
+        "knowsAbout": ["Web Development", "Software Engineering", "JavaScript", "PHP", "Java", "Python"],
+        "sameAs": [
+          "https://github.com/rrhka27",
+          "https://www.linkedin.com/in/rakha-raihan-alfarizky-948010316/",
+          "https://www.instagram.com/rrahka_/"
+        ]
+      }
+    }
+    </script>
   </body>
 </html>
